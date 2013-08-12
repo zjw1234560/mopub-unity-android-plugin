@@ -149,9 +149,17 @@ public class MoPubUnityPlugin implements BannerAdListener, InterstitialAdListene
         UnitySendMessage("MoPubAndroidManager", "onAdFailed", "");
     }
 
-    @Override public void onBannerClicked(MoPubView banner) {}
-    @Override public void onBannerExpanded(MoPubView banner) {}
-    @Override public void onBannerCollapsed(MoPubView banner) {}
+    @Override public void onBannerClicked(MoPubView banner) {
+        UnitySendMessage("MoPubAndroidManager", "onAdClicked", "");
+    }
+
+    @Override public void onBannerExpanded(MoPubView banner) {
+        UnitySendMessage("MoPubAndroidManager", "onAdExpanded", "");
+    }
+
+    @Override public void onBannerCollapsed(MoPubView banner) {
+        UnitySendMessage("MoPubAndroidManager", "onAdCollapsed", "");
+    }
 
     /*
      * InterstitialAdListener implementation
@@ -166,8 +174,17 @@ public class MoPubUnityPlugin implements BannerAdListener, InterstitialAdListene
         UnitySendMessage("MoPubAndroidManager", "onInterstitialFailed", "");
     }
 
-    @Override public void onInterstitialShown(MoPubInterstitial interstitial) {}
-    @Override public void onInterstitialDismissed(MoPubInterstitial interstitial) {}
+    @Override public void onInterstitialShown(MoPubInterstitial interstitial) {
+        UnitySendMessage("MoPubAndroidManager", "onInterstitialShown", "");
+    }
+
+    @Override public void onInterstitialClicked(MoPubInterstitial interstitial) {
+        UnitySendMessage("MoPubAndroidManager", "onInterstitialClicked", "");
+    }
+
+    @Override public void onInterstitialDismissed(MoPubInterstitial interstitial) {
+        UnitySendMessage("MoPubAndroidManager", "onInterstitialDismissed", "");
+    }
 
 
 

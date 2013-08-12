@@ -45,17 +45,38 @@ public static void reportApplicationOpen()
 `Plugins/MoPubAndroid/MoPubAndroidManager.cs` exposes the following methods:
 
 ```
-// Fired when a new ad is loaded
+// Fired when a new banner ad is loaded
 public void onAdLoaded( string empty )
 
-// Fired when an ad fails to load
+// Fired when a banner ad fails to load
 public void onAdFailed( string empty )
+
+// Fired when a banner ad is clicked
+public void onAdClicked( string empty )
+
+// Fired when a banner ad expands to encompass a greater portion of the screen
+public void onAdExpanded( string empty )
+
+// Fired when a banner ad collapses back to its initial size
+public void onAdCollapsed( string empty )
+
+
 
 // Fired when an interstitial ad is loaded
 public void onInterstitialLoaded( string empty )
 
 // Fired when an interstitial ad fails to load
-public void onInterstitialFailed( string e )
+public void onInterstitialFailed( string empty )
+
+// Fired when an interstitial ad is displayed
+public void onInterstitialShown( string empty )
+
+// Fired when an interstitial ad is clicked
+public void onInterstitialClicked( string empty )
+
+// Fired when an interstitial ad is dismissed
+public void onInterstitialDismissed( string empty )
+
 ```
 
 `Plugins/MoPubAndroid/testSupport/MoPubUIManager.cs` provides an example of how this API may be consumed.
