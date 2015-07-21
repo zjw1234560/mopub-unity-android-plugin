@@ -1,3 +1,3 @@
 # mopub-unity-android-plugin
 
-To get access to the MoPub Unity Plugins, please email sales@mopub.com
+Click [here](https://dev.twitter.com/mopub/unity) for instructions on how to integrate Unity plugins.
